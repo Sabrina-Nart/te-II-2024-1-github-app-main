@@ -38,3 +38,23 @@ export class GithubModule { }
 
   Combum Modium
 */
+
+/*
+
+1. **Declarações**:
+    - `declarations: [GithubProfileComponent, GithubRepositoriesComponent]`: Aqui, estamos declarando os componentes que fazem parte deste módulo. Os componentes `GithubProfileComponent` e `GithubRepositoriesComponent` são definidos em outros arquivos e serão usados neste módulo.
+
+2. **Importações**:
+    - `imports: [IonicModule, GithubRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, CommonModule]`: Aqui, estamos importando outros módulos necessários para o funcionamento do `GithubModule`. Vamos entender cada um deles:
+        - `IonicModule`: Este módulo é usado para integrar recursos do Ionic Framework ao aplicativo.
+        - `GithubRoutingModule`: Este módulo contém as rotas específicas para as páginas relacionadas ao GitHub.
+        - `FormsModule` e `ReactiveFormsModule`: Esses módulos são usados para trabalhar com formulários no Angular.
+        - `HttpClientModule`: Este módulo é necessário para fazer solicitações HTTP usando o `HttpClient`.
+        - `CommonModule`: Este módulo é usado para importar diretivas e recursos comuns do Angular.
+
+3. **Provedores de Serviço**:
+    - `providers: [GithubService]`: Aqui, estamos fornecendo o serviço `GithubService` para ser injetado em outros componentes ou serviços. O `GithubService` é responsável por interagir com a API do GitHub para obter informações sobre perfis de usuário e repositórios.
+
+Em resumo, o `GithubModule` configura os componentes, importa os módulos necessários e fornece o serviço `GithubService` para o aplicativo Angular.
+
+*/

@@ -27,3 +27,22 @@
   FormGroup apontando para o formulário
   Profile componentes
 -->
+
+<!--
+
+1. **Formulário**:
+    - `<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="ion-padding">`: Aqui, estamos criando um formulário HTML. O atributo `[formGroup]` está vinculando o formulário ao `FormGroup` chamado `profileForm` definido no componente.
+    - `<ion-input formControlName="profile" placeholder="Digite um perfil válido do github"></ion-input>`: Este é um campo de entrada de texto onde o usuário pode digitar o nome de um perfil do GitHub. O atributo `formControlName` está associando este campo ao campo `profile` no `FormGroup`.
+    - `<ion-button [disabled]="profileForm.invalid" type="submit">Pesquisar</ion-button>`: Este é um botão de envio do formulário. Ele só estará habilitado se o formulário for válido (ou seja, se o campo `profile` não estiver vazio).
+
+2. **Exibição do Perfil**:
+    - `<ion-item *ngIf="profile" [routerLink]="['../repositories', profile.login]">`: Aqui, estamos exibindo informações sobre o perfil do usuário. O `*ngIf` verifica se a variável `profile` está definida antes de renderizar este item.
+    - `<ion-avatar slot="start">`: Isso cria um avatar (imagem de perfil) para o usuário.
+    - `<img [src]="profile.avatar_url" />`: Aqui, estamos exibindo a imagem de perfil do usuário, cuja URL está armazenada na propriedade `avatar_url` do objeto `profile`.
+    - `<ion-label>`: Isso contém o nome e a biografia do usuário.
+    - `<h1>{{profile.name}}</h1>`: Exibe o nome completo do usuário.
+    - `<h2>{{profile.bio}}</h2>`: Exibe a biografia do usuário.
+
+Em resumo, o componente `GithubProfileComponent` permite que o usuário insira um nome de perfil do GitHub, busque informações sobre esse perfil e exiba essas informações na página.
+
+-->
