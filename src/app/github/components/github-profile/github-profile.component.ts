@@ -8,7 +8,7 @@ import { Profile } from "../../github.model";
     templateUrl: './github-profile.component.html'
 })
 export class GithubProfileComponent implements OnDestroy {
-    profileForm: FormGroup = new FormGroup({
+      profileForm: FormGroup = new FormGroup({
         profile: new FormControl('', Validators.required)
     })
     profile!: Profile;

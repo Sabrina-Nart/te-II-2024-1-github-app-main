@@ -18,6 +18,8 @@
         <ion-label>
             <h1>{{profile.name}}</h1>
             <h2>{{profile.bio}}</h2>
+            <ion-button [routerLink]="['../repositories', profile.login]">Repositórios</ion-button>
+            <ion-button [routerLink]="['../followers', profile.login]">Seguidores</ion-button>
         </ion-label>
     </ion-item>
 
